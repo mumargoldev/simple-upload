@@ -27,7 +27,7 @@ export class Application {
       next
     ) {
       const readStream = new stream.Readable();
-      readStream.push(req.file.buffer);
+      readStream.push(req.file.photo);
       readStream.push(null);
       clamav
         .createScanner(3310, "127.0.0.1")
